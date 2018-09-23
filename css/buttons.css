@@ -1,0 +1,51 @@
+@import "bourbon";
+
+* {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .4s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+	-moz-transition-duration: .4s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+h1{  font-family: 'Oswald', sans-serif;
+  color:#c78e2d;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: 45px;
+  font-size: 12px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.btn svg rect {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3.5;
+  stroke-dasharray: 422, 0;
+
+  @include transition(all 1300ms $ease-out-expo);
+}
+.btn:hover svg rect {
+  stroke-width: 7;
+  stroke-dasharray: 10, 310;
+  stroke-dashoffset: 33;
+}
+
+.btn:hover {
+  color:#000;
+  font-size:18px;
+  letter-spacing:1px;
+  font-weight:bold;
+}
